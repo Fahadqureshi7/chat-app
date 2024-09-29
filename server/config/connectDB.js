@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
 require("dotenv").config()
+const mongoose = require("mongoose")
 
 const uri = process.env.MONGODB_URI
 async function connectDB() {
@@ -14,7 +14,7 @@ async function connectDB() {
             console.log('something is wrong in mongoDB', error);
         })
     } catch (error) {
-        console.log("somthing is wrong" , error) 
+        console.log("something is wrong" , error) 
     }
 }
 
