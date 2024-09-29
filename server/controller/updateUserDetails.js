@@ -1,7 +1,7 @@
 const getUserDetailsFromToken = require("../helpers/getUserDetailsFromToken")
 const UserModel = require("../models/user")
 
-async function userUpdateDetails(req , res){
+async function updateUserDetails(req , res){
     try {
         const token = req.cookies.token || ""
         const user = await getUserDetailsFromToken(token)
@@ -29,4 +29,4 @@ async function userUpdateDetails(req , res){
     }
 }
 
-module.exports = userUpdateDetails
+module.exports = updateUserDetails
